@@ -16,9 +16,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 public class Options extends AppCompatActivity {
 
-    private int cups;
-    private TextView points;
-    private FrameLayout fm;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,8 +26,6 @@ public class Options extends AppCompatActivity {
         Window w = getWindow();
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        points = findViewById(R.id.points);
-        fm = findViewById(R.id.linear_cups);
         setFragment();
 
 
@@ -57,16 +54,26 @@ public class Options extends AppCompatActivity {
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
                     }
+                } else if (v.getId() == R.id.statistics) {
+                    try {
+                        Intent intent = new Intent(Options.this, Statistics.class);
+                        startActivity(intent);
+                        finish();
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                    }
                 }
             }
             };
 
 
-        TextView back_text = findViewById(R.id.back_text);
+        FrameLayout linear_back = findViewById(R.id.linear_back);
         Button button_choose_theme = findViewById(R.id.choose_theme_btn);
+        Button statistics_btn = findViewById(R.id.statistics);
 
-        back_text.setOnClickListener(onClickListener);
+        linear_back.setOnClickListener(onClickListener);
         button_choose_theme.setOnClickListener(onClickListener);
+        statistics_btn.setOnClickListener(onClickListener);
 
     }
 

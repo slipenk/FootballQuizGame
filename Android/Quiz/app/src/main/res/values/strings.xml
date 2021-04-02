@@ -30,4 +30,12 @@
     <string name="count_ans">8/20</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="statistics">Статистика</string>
+    <string name="number_of_questions">Загальна кількість питань - 180</string>
+    <string name="number_of_correct_questions">Кількість правильних відповідей - 0</string>
+    <string name="number_of_wrong_questions">Кількість помилок - 0</string>
+    <string name="number_of_without_questions">Кількість питань без відповідей - 180</string>
+    <string name="number_of_questions_det">Кількість питань</string>
+    <string name="ninety">90</string>
+    <string name="end_text">Вітаємо!\nВи правильно відповіли на всі запитання!\nВаш приз - 20 кубків!</string>
 </resources>

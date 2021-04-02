@@ -22,6 +22,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -60,6 +61,8 @@ public class Questions_activity extends AppCompatActivity {
     private static final long COUNTDOWN_IN_MILLIS = 200000;
     private CountDownTimer countDownTimer;
     private long timeLeftInMillis;
+
+    private QuizDBHelper dbHelper;
 
 
     public static final String KEY_CUPS = "keyCups";
@@ -112,7 +115,7 @@ public class Questions_activity extends AppCompatActivity {
         int category_id = intent.getIntExtra(Choose_themes.EXTRA_CATEGORY_ID, 0);
 
 
-        QuizDBHelper dbHelper = QuizDBHelper.getInstance(this);
+        dbHelper = QuizDBHelper.getInstance(this);
 
         questionList = dbHelper.getQuestions(category_id);
 
@@ -354,6 +357,7 @@ public class Questions_activity extends AppCompatActivity {
             UpdateCups();
             UploadCups();
             setFragment();
+            dbHelper.UpdateQuestion(String.valueOf(CurrentQuestion.getId()), 1);
             showDialog(context, R.layout.previewdialog_correct);
 
         } else {
@@ -362,6 +366,7 @@ public class Questions_activity extends AppCompatActivity {
                 UpdateCups();
                 UploadCups();
                 setFragment();
+                dbHelper.UpdateQuestion(String.valueOf(CurrentQuestion.getId()), 0);
             }
             showDialog(context, R.layout.previewdialog_wrong);
         }

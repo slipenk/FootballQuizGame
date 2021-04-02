@@ -10,13 +10,12 @@ public class Question {
     private int answer_nr;
     private String correct_link;
     private int is_correct;
-    private int has_answered;
     private int category_id;
 
 
     public Question() {}
 
-    public Question(String question, String option1, String option2, String option3, String option4, int answerN, String correct_link, int is_correct, int has_answered, int category_id) {
+    public Question(String question, String option1, String option2, String option3, String option4, int answerN, String correct_link, int is_correct, int category_id) {
         this.question = question;
         this.option1 = option1;
         this.option2 = option2;
@@ -25,7 +24,6 @@ public class Question {
         this.answer_nr = answerN;
         this.correct_link = correct_link;
         this.is_correct = is_correct;
-        this.has_answered = has_answered;
         this.category_id = category_id;
     }
 
@@ -69,9 +67,7 @@ public class Question {
         return is_correct;
     }
 
-    public int isHas_answered() {
-        return has_answered;
-    }
+
 
     public void setQuestion(String question) {
         this.question = question;
@@ -105,9 +101,7 @@ public class Question {
         this.is_correct = is_correct;
     }
 
-    public void setHas_answered(int has_answered) {
-        this.has_answered = has_answered;
-    }
+
 
     public int getCategory_id() {
         return category_id;

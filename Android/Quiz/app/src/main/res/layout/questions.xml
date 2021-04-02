@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/rel_lay">
+
+    <FrameLayout
+        android:id="@+id/linear_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="-6dp"
+        android:layout_marginLeft="-6dp"
+        android:layout_marginTop="-9dp"
+        >
+
+        <TextView
+            android:id="@+id/back_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_back_cups"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/jura_semibold"
+                android:gravity="center"
+                android:text="@string/Points"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+
+        </FrameLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/linear_cups"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="-9dp"
+        android:layout_marginEnd="-6dp"
+        android:layout_marginRight="-6dp"
+        android:orientation="vertical"
+        tools:ignore="RelativeOverlap">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_back_cups" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            app:srcCompat="@drawable/cup"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="18dp"
+            android:contentDescription="@string/Cups" />
+
+        <TextView
+            android:id="@+id/points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/jura_semibold"
+            android:gravity="center_horizontal"
+            android:text="@string/Points"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </FrameLayout>
+
+
+
+
+    <FrameLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="212dp"
+        android:layout_centerInParent="true"
+       >
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"
+            android:layout_gravity="center"
+            android:background="#FFFFFF" />
+    </FrameLayout>
+
+    <FrameLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginTop="185dp"
+        android:orientation="vertical"
+        tools:ignore="RelativeOverlap"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_background" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/jura_semibold"
+            android:gravity="center_horizontal"
+            android:text="@string/Points_10"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+             />
+
+        <ImageView
+
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/Cups"
+            app:srcCompat="@drawable/cup"
+             />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/jura_semibold"
+            android:gravity="center_horizontal"
+            android:text="@string/half_prob"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </FrameLayout>
+
+    <FrameLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="185dp"
+        android:layout_marginEnd="-1dp"
+        android:layout_marginRight="-1dp"
+        android:orientation="vertical"
+        tools:ignore="RelativeOverlap"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_background" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="6dp"
+            android:fontFamily="@font/jura_semibold"
+            android:gravity="center_horizontal"
+            android:text="@string/Points_5"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            />
+
+        <ImageView
+
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/Cups"
+            app:srcCompat="@drawable/cup"
+            />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="9dp"
+            android:fontFamily="@font/jura_semibold"
+            android:gravity="center_horizontal"
+            android:text="@string/full_prob"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_theme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+       >
+
+        <TextView
+            android:id="@+id/str_football"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jura_semibold"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/Question1"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:typeface="normal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            />
+
+    </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical"
+            >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:background="@drawable/union_pressed"
+                android:fontFamily="@font/jura_semibold"
+                android:gravity="center"
+                android:text="@string/MC"
+                android:textAllCaps="false"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:background="@drawable/union_pressed"
+                android:fontFamily="@font/jura_semibold"
+                android:gravity="center"
+                android:text="@string/PSG"
+                android:textAllCaps="false"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                app:backgroundTint="@null" />
+            <Button
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:background="@drawable/union_pressed"
+                android:fontFamily="@font/jura_semibold"
+                android:gravity="center"
+                android:text="@string/FEY"
+                android:textAllCaps="false"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                app:backgroundTint="@null" />
+            <Button
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:background="@drawable/union_pressed"
+                android:fontFamily="@font/jura_semibold"
+                android:gravity="center"
+                android:text="@string/LAZ"
+                android:textAllCaps="false"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                app:backgroundTint="@null" />
+        </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>

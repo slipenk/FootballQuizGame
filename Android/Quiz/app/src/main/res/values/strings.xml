@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Футбольна вікторина</string>
+    <string name="football_quiz">Футбольна</string>
+    <string name="football_quiz_2">вікторина</string>
+    <string name="Play">Грати</string>
+    <string name="Cups">Cups</string>
+    <string name="Points">0</string>
+    <string name="Points_5">5</string>
+    <string name="Points_10">10</string>
+    <string name="Choose_theme">Вибрати тему</string>
+    <string name="Stats">Статистика</string>
+    <string name="Champions_league">Ліга чемпіонів</string>
+    <string name="England">Англія</string>
+    <string name="Choose_theme_2">Виберіть тему:</string>
+    <string name="Question1">Який з цих футбольних клубів вигравав Лігу чемпіонів/Кубок європейських чемпіонів?</string>
+    <string name="MC">«Манчестер Сіті»</string>
+    <string name="PSG">«Парі Сен-Жермен»</string>
+    <string name="FEY">«Феєнорд»</string>
+    <string name="LAZ">«Лаціо»</string>
+    <string name="half_prob">50/50</string>
+    <string name="full_prob">100%</string>
+    <string name="correct">Правильно!\nВи отримуєте \n1__!</string>
+    <string name="wrong">Неправильно!\nВи втрачаєте \n1__!</string>
+    <string name="time">Час вийшов!\nВи втрачаєте \n1__!</string>
+    <string name="btn_dialog_1">Пересвідчитися у правильності</string>
+    <string name="btn_dialog_2">Наступне питання</string>
+    <string name="btn_dialog_3">Повернутися в головне меню</string>
+    <string name="btn_dialog_4">Дізнатися відповідь</string>
+    <string name="count_ans">8/20</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

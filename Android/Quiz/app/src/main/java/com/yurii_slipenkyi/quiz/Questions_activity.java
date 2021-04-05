@@ -30,7 +30,7 @@ import java.util.List;
 
 public class Questions_activity extends AppCompatActivity {
 
-
+    public static final String EXTRA_ID_CORRECT = "extraCorrect";
 
     private TextView question_str;
     private TextView number_of_questions;
@@ -41,6 +41,7 @@ public class Questions_activity extends AppCompatActivity {
     private Button button_3;
     private Button button_4;
     private Button preview_btn_2;
+    private  Button preview_btn_3;
     private TextView five;
     private TextView fifty;
     private ImageView cups_img;
@@ -70,6 +71,7 @@ public class Questions_activity extends AppCompatActivity {
     private boolean option_half_b = false;
     private boolean option_ex_b = false;
 
+    private int count_wrong = 0;
 
 
     @Override
@@ -124,10 +126,6 @@ public class Questions_activity extends AppCompatActivity {
 
 
         showNextQuestion();
-
-
-
-
 
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
@@ -251,6 +249,15 @@ public class Questions_activity extends AppCompatActivity {
             timeLeftInMillis = COUNTDOWN_IN_MILLIS;
             startCountDown();
         } else {
+            Intent intent = new Intent(Questions_activity.this, End_activity.class);
+            if(count_wrong == 0) {
+                int CORRECT = 1;
+                intent.putExtra(EXTRA_ID_CORRECT, CORRECT);
+            } else {
+                int WRONG = 0;
+                intent.putExtra(EXTRA_ID_CORRECT, WRONG);
+            }
+            startActivity(intent);
             finish();
         }
     }
@@ -288,7 +295,7 @@ public class Questions_activity extends AppCompatActivity {
 
        Button preview_btn_1 = dialog.findViewById(R.id.preview_btn_1);
        preview_btn_2 = dialog.findViewById(R.id.preview_btn_2);
-       Button preview_btn_3 = dialog.findViewById(R.id.preview_btn_3);
+       preview_btn_3 = dialog.findViewById(R.id.preview_btn_3);
        View.OnClickListener onClickListener = new View.OnClickListener() {
            @Override
            public void onClick(View v) {
@@ -362,6 +369,7 @@ public class Questions_activity extends AppCompatActivity {
 
         } else {
             if(cups != 0) {
+                ++count_wrong;
                 --cups;
                 UpdateCups();
                 UploadCups();
@@ -375,6 +383,8 @@ public class Questions_activity extends AppCompatActivity {
            preview_btn_2.setText("Наступне питання");
        } else  {
            preview_btn_2.setText("Завершити");
+           preview_btn_3.setClickable(false);
+           preview_btn_3.setTextColor(Color.argb(70, 255, 255, 255));
        }
    }
 

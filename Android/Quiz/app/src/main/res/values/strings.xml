@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Футбольна вікторина</string>
+    <string name="app_name">ФВ</string>
     <string name="football_quiz">Футбольна</string>
     <string name="football_quiz_2">вікторина</string>
     <string name="Play">Грати</string>

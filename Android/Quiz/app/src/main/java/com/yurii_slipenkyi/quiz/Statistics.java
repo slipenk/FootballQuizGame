@@ -17,6 +17,13 @@ import java.util.List;
 
 public class Statistics extends AppCompatActivity {
 
+    public static final String EXTRA_ID_BUTTON = "extraButton";
+
+    private final int BUTTON_1 = 1;
+    private final int BUTTON_2 = 2;
+    private final int BUTTON_3 = 3;
+    private final int BUTTON_4 = 4;
+
     private List<Question> questionList;
 
     @SuppressLint("SetTextI18n")
@@ -57,25 +64,37 @@ public class Statistics extends AppCompatActivity {
                     }
                 } else if(v.getId() == R.id.number_of_questions) {
                     try {
-
+                        Intent intent = new Intent(Statistics.this, Statistics_detailed.class);
+                        intent.putExtra(EXTRA_ID_BUTTON, BUTTON_1);
+                        startActivity(intent);
+                        finish();
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
                     }
                 } else if(v.getId() == R.id.number_of_correct_questions) {
                     try {
-
+                        Intent intent = new Intent(Statistics.this, Statistics_detailed.class);
+                        intent.putExtra(EXTRA_ID_BUTTON, BUTTON_2);
+                        startActivity(intent);
+                        finish();
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
                     }
                 } else if(v.getId() == R.id.number_of_wrong_questions) {
                     try {
-
+                        Intent intent = new Intent(Statistics.this, Statistics_detailed.class);
+                        intent.putExtra(EXTRA_ID_BUTTON, BUTTON_3);
+                        startActivity(intent);
+                        finish();
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
                     }
                 } else if(v.getId() == R.id.number_of_without_questions) {
                     try {
-
+                        Intent intent = new Intent(Statistics.this, Statistics_detailed.class);
+                        intent.putExtra(EXTRA_ID_BUTTON, BUTTON_4);
+                        startActivity(intent);
+                        finish();
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
                     }

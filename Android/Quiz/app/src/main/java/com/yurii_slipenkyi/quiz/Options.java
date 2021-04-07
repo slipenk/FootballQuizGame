@@ -32,13 +32,10 @@ public class Options extends AppCompatActivity {
 
 
 
-
-
-
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (v.getId() == R.id.back_text) {
+                if (v.getId() == R.id.linear_back) {
                     try {
                         Intent intent = new Intent(Options.this, MainActivity.class);
                         startActivity(intent);

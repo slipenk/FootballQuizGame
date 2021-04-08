@@ -73,9 +73,11 @@
 
     <LinearLayout
         android:id="@+id/linear_1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
         android:layout_centerInParent="true">
 
         <Button
@@ -87,7 +89,7 @@
             android:gravity="center"
             android:text="@string/Choose_theme"
             android:textAllCaps="false"
-            android:textSize="37sp"
+            android:textSize="35sp"
             android:textColor="@color/white"
             app:backgroundTint="@null" />
 
@@ -101,7 +103,7 @@
             android:gravity="center"
             android:text="@string/Stats"
             android:textAllCaps="false"
-            android:textSize="37sp"
+            android:textSize="35sp"
             android:textColor="@color/white"
             app:backgroundTint="@null" />
 

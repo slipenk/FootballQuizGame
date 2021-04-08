@@ -22,6 +22,12 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
+import org.acra.ACRA;
+import org.acra.annotation.AcraCore;
+import org.acra.annotation.AcraMailSender;
+import org.acra.annotation.AcraToast;
+import org.acra.data.StringFormat;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -30,15 +36,20 @@ import java.util.List;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String DATE_SAVED = "DATE_SAVED";
     private long backPressedTime;
     private Toast backToast;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Quiz_application_report q = new Quiz_application_report();
+        q.attachBaseContext(getApplicationContext());
 
         createNotificationChannel();
 
@@ -119,6 +130,9 @@ public class MainActivity extends AppCompatActivity {
         alarmManager.set(AlarmManager.RTC_WAKEUP,  System.currentTimeMillis() + c.getTime().getTime() , pendingIntent);
 
     }
+
+
+
 
 
     @Override

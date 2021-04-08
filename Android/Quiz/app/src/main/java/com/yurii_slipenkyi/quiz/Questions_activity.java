@@ -31,6 +31,7 @@ import java.util.List;
 public class Questions_activity extends AppCompatActivity {
 
     public static final String EXTRA_ID_CORRECT = "extraCorrect";
+    public static final String EXTRA_SERVICE = "extraService";
 
     private TextView question_str;
     private TextView number_of_questions;
@@ -72,6 +73,7 @@ public class Questions_activity extends AppCompatActivity {
     private boolean option_ex_b = false;
 
     private int count_wrong = 0;
+    private Intent serviceIntent;
 
 
     @Override
@@ -82,6 +84,7 @@ public class Questions_activity extends AppCompatActivity {
 
         Window w = getWindow();
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 
 
 
@@ -115,6 +118,12 @@ public class Questions_activity extends AppCompatActivity {
 
         Intent intent = getIntent();
         int category_id = intent.getIntExtra(Choose_themes.EXTRA_CATEGORY_ID, 0);
+
+
+        serviceIntent = new Intent(this, MyService.class);
+        serviceIntent.putExtra(EXTRA_SERVICE, category_id);
+        startService(serviceIntent);
+
 
 
         dbHelper = QuizDBHelper.getInstance(this);
@@ -257,6 +266,7 @@ public class Questions_activity extends AppCompatActivity {
                 int WRONG = 0;
                 intent.putExtra(EXTRA_ID_CORRECT, WRONG);
             }
+            stopService(serviceIntent);
             startActivity(intent);
             finish();
         }
@@ -282,6 +292,7 @@ public class Questions_activity extends AppCompatActivity {
                 showDialog(Questions_activity.this, R.layout.previewdialog_time);
             }
         }.start();
+
     }
 
    private void showDialog(Context context, int ID_layout) {
@@ -303,6 +314,7 @@ public class Questions_activity extends AppCompatActivity {
                     try {
                         Intent intent = new Intent(Questions_activity.this, MainActivity.class);
                         startActivity(intent);
+                        stopService(serviceIntent);
                         dialog.dismiss();
                         finish();
                     } catch (Exception e) {
